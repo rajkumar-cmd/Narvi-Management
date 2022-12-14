@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+.whyNarvi{
+    background-color: #0d1833;
+    color: white;
+    display: flex;
+}
+.MasterlistHeading{
+    color: #7FD957;
+    font-weight: 600;
+    font-size: small;
+    margin-top: 5%;
+    margin-left: 13.5%;
+    text-align: start;
+}
+.listIcon{
+    font-size: 150%;
+    margin-top: 100%;
+    color: #7FD957;
+    margin-left: 25%;
+}
+.listText{
+    margin-left: 6.5%;
+    text-align:start;
+    width: 70%;
+    font-family: 'Poppins', sans-serif;
+}
+.listArrange{
+    display: flex;
+    border-radius: 10px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.listArrange:hover{
+    background-color: #2c3349;
+}
+.headingList{
+    font-family: 'Fredoka One', cursive;
+    font-size: larger;
+}
