@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 .whyNarvi{
     background-color: #0d1833;
-    color: white;
+    /* color: white; */
+    color: #7FD957;
     display: flex;
+    padding-right: 5%;
+    padding-left: 5%;
 }
 .MasterlistHeading{
     color: #7FD957;
@@ -22,6 +25,7 @@
 .listText{
     margin-left: 6.5%;
     text-align:start;
+    color: white;
     width: 70%;
     font-family: 'Poppins', sans-serif;
 }
@@ -35,6 +39,59 @@
     background-color: #2c3349;
 }
 .headingList{
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
     font-size: larger;
+}
+.seeMore{
+    font-family: 'Poppins', sans-serif;
+    text-align: start;
+    margin-left: 13.5%;
+    margin-bottom: 5%;
+    font-size: large;
+    font-weight: 600;
+}
+.seeMore:hover{
+    color: #a8da92;
+}
+.listText2{
+    margin-left: 6.5%;
+    text-align:start;
+    /* text-align: center; */
+    color: #a8da92;
+    width: fit-content;
+    font-family: 'Poppins', sans-serif;
+}
+.headingList2{
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
+    font-size: larger;
+    width: 100%;
+}
+.listArrange2{
+    display: flex;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 5%;
+}
+.listIcon2{
+    font-size: 150%;
+    margin-top: 10%;
+    color: #7FD957;
+    margin-left: 25%;
+}
+.MasterlistHeading2{
+    color: #7FD957;
+    font-weight: 600;
+    font-size: small;
+    margin-top: 5%;
+    margin-left: 13.5%;
+    text-align: start;
+}
+.lastNavbar{
+    width: 20%;
+}
+.listArrange2:hover{
+    background-color: #2c3349;
 }

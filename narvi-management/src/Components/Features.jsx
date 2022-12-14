@@ -20,9 +20,10 @@ import { TbSubtask,TbFolders,TbChartPie,TbTemplate } from "react-icons/tb";
 import { FaSalesforce } from "react-icons/fa";
 import { SiMicrosoftteams,SiAdobecreativecloud } from "react-icons/si";
 import { ArrowForwardIcon } from '@chakra-ui/icons'
-const WhyNarvi = () => {
-    return (
-        <div className={Style.whyNarvi}>
+
+const Features = () => {
+  return (
+    <div className={Style.whyNarvi}>
             <div>
                 <p className={Style.MasterlistHeading}>FOR TEAMS</p>
                 <UnorderedList styleType={"none"}>
@@ -231,7 +232,7 @@ const WhyNarvi = () => {
                 </UnorderedList>
             </div>
         </div>
-    )
+  )
 }
 
-export default WhyNarvi
+export default Features
