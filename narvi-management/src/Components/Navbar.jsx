@@ -1,12 +1,26 @@
 import React from 'react'
 import Style from "../Styles/Navbar.module.css"
 import { ReactComponent as NarviIconText } from '../Icons/NarviWithText.svg'
-import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons'
+import { ChevronDownIcon, ChevronUpIcon, HamburgerIcon } from '@chakra-ui/icons'
 import WhyNarvi from './WhyNarvi'
-import { Navigate,NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Features from './Features'
 import Resources from './Resources'
-import { motion } from "framer-motion";
+import { Icon } from '@chakra-ui/react'
+import { GiHamburgerMenu } from 'react-icons/gi';
+
+import {
+    Drawer,
+    DrawerBody,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
+    Button,
+    Input,
+    useDisclosure
+} from '@chakra-ui/react'
 
 const Navbar = () => {
     // Why Narvi?
@@ -99,6 +113,10 @@ const Navbar = () => {
 
     }
 
+    // Side Drawer
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const btnRef = React.useRef()
+
     return (
         <>
             <div className={Style.wholeComponent}>
@@ -108,63 +126,97 @@ const Navbar = () => {
                     </NavLink>
                 </div>
                 <div className={Style.navbarText}>
-                    <button className={Style.navbarText1} onClick={handleWhyNarvi} style={(focuswhyNarvi ? ({ color: "#7FD957", textDecoration:"underline", textDecorationThickness:"2px" }) : ({ color: "white" }))}>
+                    <button className={Style.navbarText1} onClick={handleWhyNarvi} style={(focuswhyNarvi ? ({ color: "#7FD957", textDecoration: "underline", textDecorationThickness: "2px" }) : ({ color: "white" }))}>
                         Why Narvi ?
                         {whyNarviIcon ? (<ChevronDownIcon fontSize={22} marginBottom={0.5} />) : (
                             <ChevronUpIcon fontSize={22} marginBottom={0.5} />
                         )}
                     </button>
-                    <button className={Style.navbarText2} onClick={handleFeatures} style={(focusFeatures ? ({ color: "#7FD957", textDecoration:"underline", textDecorationThickness:"2px" }) : ({ color: "white" }))}>
+                    <button className={Style.navbarText2} onClick={handleFeatures} style={(focusFeatures ? ({ color: "#7FD957", textDecoration: "underline", textDecorationThickness: "2px" }) : ({ color: "white" }))}>
                         Features
                         {FeaturesIcon ? (<ChevronDownIcon fontSize={22} marginBottom={0.5} />) : (
                             <ChevronUpIcon fontSize={22} marginBottom={0.5} />
                         )}
                     </button>
-                    <button className={Style.navbarText3} onClick={handleResources} style={(focusResources ? ({ color: "#7FD957", textDecoration:"underline", textDecorationThickness:"2px" }) : ({ color: "white" }))}>
+                    <button className={Style.navbarText3} onClick={handleResources} style={(focusResources ? ({ color: "#7FD957", textDecoration: "underline", textDecorationThickness: "2px" }) : ({ color: "white" }))}>
                         Resources
                         {ResourcesIcon ? (<ChevronDownIcon fontSize={22} marginBottom={0.5} />) : (
                             <ChevronUpIcon fontSize={22} marginBottom={0.5} />
                         )}
                     </button>
                     <NavLink to={"/pricing"} className={Style.navbarText4} onClick={handlePricing}>
-                    <button className={Style.navbarText14} style={(focusPricing ? ({ color: "#7FD957", textDecoration:"underline", textDecorationThickness:"2px" }) : ({ color: "white" }))}>
-                        Pricing
-                    </button>
+                        <button className={Style.navbarText14} style={(focusPricing ? ({ color: "#7FD957", textDecoration: "underline", textDecorationThickness: "2px" }) : ({ color: "white" }))}>
+                            Pricing
+                        </button>
                     </NavLink>
                     <NavLink to={"/contact"} className={Style.navbarText5} onClick={handleContact}>
-                    <button className={Style.navbarText15} style={(focusContact ? ({ color: "#7FD957", textDecoration:"underline", textDecorationThickness:"2px" }) : ({ color: "white" }))}>
-                        Contact Sales
-                    </button>
+                        <button className={Style.navbarText15} style={(focusContact ? ({ color: "#7FD957", textDecoration: "underline", textDecorationThickness: "2px" }) : ({ color: "white" }))}>
+                            Contact Sales
+                        </button>
                     </NavLink>
                 </div>
                 <div className={Style.navbarAccounts}>
                     <NavLink to={"/login"} className={Style.navbarText6} onClick={handleLogin}>
-                    <button>
-                        Login
-                    </button>
+                        <button>
+                            Login
+                        </button>
                     </NavLink>
                     <NavLink to={"/signup"} className={Style.navbarText7} onClick={handleSignup}>
-                    <button>
-                        Start for free
-                    </button>
+                        <button>
+                            Start for free
+                        </button>
                     </NavLink>
                 </div>
+            </div>
+            <div className={Style.wholeComponentTablet}>
+                <div className={Style.logoParentTablet} onClick={handleFuse}>
+                    <NavLink to={"/"}>
+                        <NarviIconText className={Style.logoTablet} />
+                    </NavLink>
+                </div>
+                <div>
+                    <Button ref={btnRef} className={Style.hamberger} onClick={onOpen}>
+                        <Icon as={GiHamburgerMenu} />
+                    </Button>
+                    <Drawer
+                        isOpen={isOpen}
+                        placement='right'
+                        onClose={onClose}
+                        finalFocusRef={btnRef}
+                    >
+                        <DrawerOverlay />
+                        <DrawerContent>
+                            <DrawerCloseButton />
+                            <DrawerHeader>Create your account</DrawerHeader>
 
+                            <DrawerBody>
+                                <Input placeholder='Type here...' />
+                            </DrawerBody>
+
+                            <DrawerFooter>
+                                <Button variant='outline' mr={3} onClick={onClose}>
+                                    Cancel
+                                </Button>
+                                <Button colorScheme='blue'>Save</Button>
+                            </DrawerFooter>
+                        </DrawerContent>
+                    </Drawer>
+                </div>
             </div>
             <div>
-            {whyNarvi ? (<WhyNarvi />) : (
-                ""
-            )}
+                {whyNarvi ? (<WhyNarvi />) : (
+                    ""
+                )}
             </div>
             <div>
-            {features ? (<Features />) : (
-                ""
-            )}
+                {features ? (<Features />) : (
+                    ""
+                )}
             </div>
             <div>
-            {resources ? (<Resources />) : (
-                ""
-            )}
+                {resources ? (<Resources />) : (
+                    ""
+                )}
             </div>
         </>
     )
