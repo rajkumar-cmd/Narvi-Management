@@ -3,9 +3,10 @@ import Style from "../Styles/Navbar.module.css"
 import { ReactComponent as NarviIconText } from '../Icons/NarviWithText.svg'
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons'
 import WhyNarvi from './WhyNarvi'
-import { NavLink } from 'react-router-dom'
+import { Navigate,NavLink } from 'react-router-dom'
 import Features from './Features'
 import Resources from './Resources'
+import { motion } from "framer-motion";
 
 const Navbar = () => {
     // Why Narvi?
@@ -62,6 +63,7 @@ const Navbar = () => {
         handleFuse();
         setPricingIcon(!PricingIcon);
         setFocusPricing(!focusPricing);
+
     }
 
     // Contact Sales
@@ -72,12 +74,35 @@ const Navbar = () => {
         handleFuse();
         setContactIcon(!ContactIcon);
         setFocusContact(!focusContact);
+
+    }
+
+    // Login
+    const [Login, setLogin] = React.useState(false);
+    const [LoginIcon, setLoginIcon] = React.useState(true);
+    const [focusLogin, setFocusLogin] = React.useState(false);
+    const handleLogin = () => {
+        handleFuse();
+        setLoginIcon(!LoginIcon);
+        setFocusLogin(!focusLogin);
+
+    }
+
+    // Signup
+    const [Signup, setSignup] = React.useState(false);
+    const [SignupIcon, setSignupIcon] = React.useState(true);
+    const [focusSignup, setFocusSignup] = React.useState(false);
+    const handleSignup = () => {
+        handleFuse();
+        setSignupIcon(!SignupIcon);
+        setFocusSignup(!focusSignup);
+
     }
 
     return (
         <>
             <div className={Style.wholeComponent}>
-                <div className={Style.logoParent}>
+                <div className={Style.logoParent} onClick={handleFuse}>
                     <NavLink to={"/"}>
                         <NarviIconText className={Style.logo} />
                     </NavLink>
@@ -101,20 +126,28 @@ const Navbar = () => {
                             <ChevronUpIcon fontSize={22} marginBottom={0.5} />
                         )}
                     </button>
-                    <button className={Style.navbarText4} onClick={handlePricing} style={(focusPricing ? ({ color: "#7FD957", textDecoration:"underline", textDecorationThickness:"2px" }) : ({ color: "white" }))}>
-                        <NavLink to={"/pricing"}>Pricing</NavLink>
+                    <NavLink to={"/pricing"} className={Style.navbarText4} onClick={handlePricing}>
+                    <button className={Style.navbarText14} style={(focusPricing ? ({ color: "#7FD957", textDecoration:"underline", textDecorationThickness:"2px" }) : ({ color: "white" }))}>
+                        Pricing
                     </button>
-                    <button className={Style.navbarText5} onClick={handleContact} style={(focusContact ? ({ color: "#7FD957", textDecoration:"underline", textDecorationThickness:"2px" }) : ({ color: "white" }))}>
-                        <NavLink to={"/contact"}>Contact Sales</NavLink>
+                    </NavLink>
+                    <NavLink to={"/contact"} className={Style.navbarText5} onClick={handleContact}>
+                    <button className={Style.navbarText15} style={(focusContact ? ({ color: "#7FD957", textDecoration:"underline", textDecorationThickness:"2px" }) : ({ color: "white" }))}>
+                        Contact Sales
                     </button>
+                    </NavLink>
                 </div>
                 <div className={Style.navbarAccounts}>
-                    <button className={Style.navbarText6} onClick={handleResources}>
-                        <NavLink to={"/login"}>Login</NavLink>
+                    <NavLink to={"/login"} className={Style.navbarText6} onClick={handleLogin}>
+                    <button>
+                        Login
                     </button>
-                    <button className={Style.navbarText7} onClick={handleResources}>
-                        <NavLink to={"/signup"}>Start for free</NavLink>
+                    </NavLink>
+                    <NavLink to={"/signup"} className={Style.navbarText7} onClick={handleSignup}>
+                    <button>
+                        Start for free
                     </button>
+                    </NavLink>
                 </div>
 
             </div>

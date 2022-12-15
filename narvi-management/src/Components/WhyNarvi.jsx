@@ -6,6 +6,8 @@ import {
     ListIcon,
     OrderedList,
     UnorderedList,
+    Center,
+    Divider
 } from '@chakra-ui/react'
 import { Icon } from '@chakra-ui/react'
 import { AiFillBook } from "react-icons/ai";
@@ -20,6 +22,7 @@ import { TbSubtask,TbFolders,TbChartPie,TbTemplate } from "react-icons/tb";
 import { FaSalesforce } from "react-icons/fa";
 import { SiMicrosoftteams,SiAdobecreativecloud } from "react-icons/si";
 import { ArrowForwardIcon } from '@chakra-ui/icons'
+
 const WhyNarvi = () => {
     return (
         <div className={Style.whyNarvi}>
@@ -75,6 +78,9 @@ const WhyNarvi = () => {
                     </NavLink>
                 </UnorderedList>
             </div>
+            <Center height='360px' marginTop={12} marginLeft={2}>
+            <Divider orientation='vertical' color={"#7FD957"}/>
+            </Center>
             <div>
                 <p className={Style.MasterlistHeading}>USE CASE</p>
                 <UnorderedList styleType={"none"}>
@@ -127,6 +133,9 @@ const WhyNarvi = () => {
                     </NavLink>
                 </UnorderedList>
             </div>
+            <Center height='360px' marginTop={12} marginLeft={2}>
+            <Divider orientation='vertical' color={"#7FD957"}/>
+            </Center>
             <div>
                 <p className={Style.MasterlistHeading}>APPS & INTEGRATIONS</p>
                 <UnorderedList styleType={"none"}>
@@ -179,8 +188,11 @@ const WhyNarvi = () => {
                     </NavLink>
                 </UnorderedList>
             </div>
+            <Center height='360px' marginTop={12} marginLeft={2}>
+            <Divider orientation='vertical' color={"#7FD957"}/>
+            </Center>
             <div className={Style.lastNavbar}>
-            <p className={Style.MasterlistHeading2}>EXPLORE WRIKE</p>
+            <p className={Style.MasterlistHeading1}>EXPLORE NARVI</p>
                 <UnorderedList styleType={"none"}>
                     <NavLink to={""}>
                         <ListItem className={Style.listArrange2}>
