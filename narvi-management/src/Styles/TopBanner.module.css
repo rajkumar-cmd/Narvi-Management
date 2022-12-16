@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@900&display=swap');
+.wholeHeader{
+    background-color: #0d1833;
+    color: white;
+    padding-left: 11rem;
+    padding-right: 10rem;
+    padding-top: 2vw;
+    display: flex;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: 40% 0%;
+    background-image: url("https://web-static.wrike.com/cdn-cgi/image/width=1920,format=auto,quality=80/tp/storage/uploads/a6689dc7-598d-42e0-9856-339b302c27d5/rebrand-hero-illustration-homepage-screenshots-dark-desktop-2x.png");
+}
+.wholeHeaderText{
+    font-family: 'Noto Sans', sans-serif;
+    text-align: start;
+    font-size: 4vw;
+    font-weight: 600;
+    padding-right: 15vw;
+    margin-right: 10vw;
+}
+.wholeParaText{
+    font-family: 'Poppins', sans-serif;
+    text-align: start;
+    font-size: 1vw;
+    opacity: 0.6;
+}
+.wholeHeader1{
+    padding-bottom: 2vw;
+    padding-top: 1vw;
+}
+.wholeinput{
+    padding: 1rem;
+    border: 4px solid #7FD957;
+    border-radius: 10px;
+    width:24vw;
+    color: #0d1833;
+    font-family: 'Play', sans-serif;
+}
+.wholebuttons{
+    padding-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+.wholebutton{
+    background-color: #7FD957;
+    border: 4px solid #7FD957;
+    border-radius: 100px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.wholebutton:hover{
+    border: 4px solid #0E6131;
+    background-color: #0E6131;
+    color: #7FD957;
+}
+.headerImg{
+    display: none;
+    padding-top: 1rem;
+}
+@media screen and (max-width:1000px) {
+    .wholeHeader{
+        background-image: url("");
+    }
+    .wholeHeaderText{
+        text-align: center;
+        font-size: 6vw;
+        padding-right: 0%;
+        margin-right: 0%;
+    }
+    .wholeParaText{
+        font-size: large;
+        text-align: center;
+    }
+    .headerImg{
+        display: block;
+    }
+    .wholebuttons{
+        display: flex;
+        justify-content: center;
+    }
+}

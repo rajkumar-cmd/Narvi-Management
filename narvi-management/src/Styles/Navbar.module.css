@@ -8,6 +8,7 @@
         background-color: #0d1833;
         justify-content: space-between;
         align-items: center;
+        z-index: 100;
     }
     .logoParent{
         display: flex;
@@ -162,28 +163,5 @@
     .wholeComponent{
         display: none;
     }
-    .wholeComponentTablet{
-        display: flex;
-        justify-content: space-between;
-        padding-left: 6rem;
-        padding-right: 6rem;
-        background-color: #0d1833;
-    }
-    .hamberger{
-        background-color:#0E6131;
-        color:#7FD957;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        font-size: 50px;
-        font-weight: 700;
-    }
-    .hamberger:hover{
-        background-color:#7FD957;
-        color:#0E6131;
-    }
-    .logoTablet{
-        width: 40%;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
+    
 }

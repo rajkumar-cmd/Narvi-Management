@@ -1,26 +1,12 @@
 import React from 'react'
 import Style from "../Styles/Navbar.module.css"
-import { ReactComponent as NarviIconText } from '../Icons/NarviWithText.svg'
-import { ChevronDownIcon, ChevronUpIcon, HamburgerIcon } from '@chakra-ui/icons'
+import NarviWithText from "../Icons/NarviWithText.png"
+import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons'
 import WhyNarvi from './WhyNarvi'
 import { NavLink } from 'react-router-dom'
 import Features from './Features'
 import Resources from './Resources'
-import { Icon } from '@chakra-ui/react'
-import { GiHamburgerMenu } from 'react-icons/gi';
-
-import {
-    Drawer,
-    DrawerBody,
-    DrawerFooter,
-    DrawerHeader,
-    DrawerOverlay,
-    DrawerContent,
-    DrawerCloseButton,
-    Button,
-    Input,
-    useDisclosure
-} from '@chakra-ui/react'
+import Drawer from './Drawer'
 
 const Navbar = () => {
     // Why Narvi?
@@ -113,16 +99,12 @@ const Navbar = () => {
 
     }
 
-    // Side Drawer
-    const { isOpen, onOpen, onClose } = useDisclosure()
-    const btnRef = React.useRef()
-
     return (
         <>
             <div className={Style.wholeComponent}>
                 <div className={Style.logoParent} onClick={handleFuse}>
                     <NavLink to={"/"}>
-                        <NarviIconText className={Style.logo} />
+                        <img src={NarviWithText} alt="" style={{ width: "10rem" }} />
                     </NavLink>
                 </div>
                 <div className={Style.navbarText}>
@@ -169,40 +151,9 @@ const Navbar = () => {
                 </div>
             </div>
             <div className={Style.wholeComponentTablet}>
-                <div className={Style.logoParentTablet} onClick={handleFuse}>
-                    <NavLink to={"/"}>
-                        <NarviIconText className={Style.logoTablet} />
-                    </NavLink>
-                </div>
-                <div>
-                    <Button ref={btnRef} className={Style.hamberger} onClick={onOpen}>
-                        <Icon as={GiHamburgerMenu} />
-                    </Button>
-                    <Drawer
-                        isOpen={isOpen}
-                        placement='right'
-                        onClose={onClose}
-                        finalFocusRef={btnRef}
-                    >
-                        <DrawerOverlay />
-                        <DrawerContent>
-                            <DrawerCloseButton />
-                            <DrawerHeader>Create your account</DrawerHeader>
-
-                            <DrawerBody>
-                                <Input placeholder='Type here...' />
-                            </DrawerBody>
-
-                            <DrawerFooter>
-                                <Button variant='outline' mr={3} onClick={onClose}>
-                                    Cancel
-                                </Button>
-                                <Button colorScheme='blue'>Save</Button>
-                            </DrawerFooter>
-                        </DrawerContent>
-                    </Drawer>
-                </div>
+                <Drawer />
             </div>
+
             <div>
                 {whyNarvi ? (<WhyNarvi />) : (
                     ""

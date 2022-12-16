@@ -1,10 +1,20 @@
 import React from 'react'
-import Holidayheader from '../Components/Holidayheader'
-import Navbar from '../Components/Navbar'
+
+// import TopHeader from "../Components/TopHeader";
+import TopBanner from "../Components/TopBanner";
+import TrustedBy from "../Components/TrustedBy";
+import TeamWork from '../Components/TeamWork';
+import Gift from '../Components/Gift';
+import Workmanagement from '../Components/Workmanagement';
+
 const Home = () => {
   return (
     <div>
-    <h1>Home</h1>
+      <TopBanner/>
+      <TrustedBy/>
+      <TeamWork/>
+      <Gift/>
+      <Workmanagement/>
     </div>
   )
 }
