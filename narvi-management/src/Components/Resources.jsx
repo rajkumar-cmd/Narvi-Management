@@ -1,13 +1,10 @@
 import React from 'react'
 import Style from '../Styles/Resources.module.css'
 import {
-    List,
+
     ListItem,
-    ListIcon,
-    OrderedList,
     UnorderedList,
     Card,
-    CardHeader,
     CardBody,
     CardFooter,
     Image,
@@ -17,17 +14,10 @@ import {
 } from '@chakra-ui/react'
 import { Icon } from '@chakra-ui/react'
 // 
-import { AiFillBook,AiOutlineCode } from "react-icons/ai";
-import { HiSpeakerphone,HiOutlinePencilAlt } from "react-icons/hi";
+import { AiOutlineCode } from "react-icons/ai";
+import { HiOutlinePencilAlt } from "react-icons/hi";
 import { NavLink } from 'react-router-dom';
-import { ImBriefcase,ImNewspaper } from "react-icons/im";
-import { BiLineChart, BiCalendarCheck, BiCategory } from "react-icons/bi";
-import { IoIosColorPalette,IoNewspaperSharp } from "react-icons/io";
-import { BsSlack, BsFillCalculatorFill } from "react-icons/bs";
-import { TiFlowMerge } from "react-icons/ti";
-import { TbSubtask, TbFolders, TbChartPie, TbTemplate } from "react-icons/tb";
-import { FaSalesforce,FaFolderOpen,FaGraduationCap,FaHandshake } from "react-icons/fa";
-import { SiMicrosoftteams, SiAdobecreativecloud } from "react-icons/si";
+import { FaFolderOpen,FaGraduationCap,FaHandshake } from "react-icons/fa";
 import { MdOndemandVideo } from "react-icons/md";
 
 // 

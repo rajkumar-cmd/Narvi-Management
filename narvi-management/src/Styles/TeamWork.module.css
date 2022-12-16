@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@900&display=swap');
+.wholeHeaderText{
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 900;
+    padding-bottom: 1rem;
+}
+.teamWork{
+    padding-top: 5rem;
+    background-color: #EBF5F3;
+}
+.wholeParaText{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 1vw;
+    opacity: 0.6;
+}
+.flexBoxes{
+    padding-right: 10rem;
+    padding-left: 10rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+}
+.flexBox{
+    background-color: white;
+    border-radius: 10px;
+    transition: ease-in;
+    transition: 0.5s;
+    padding: 2rem;
+}
+.flexMore{
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    font-weight: 600;
+    padding-top: 1rem;
+}
+.flexBox:hover{
+    background-color: #03464D;
+    cursor: pointer;
+    color: white;
+}
+.flexImage{
+    margin: auto;
+    padding: 1rem;
+    padding-top: 2rem;
+}
+.flexImage1{
+    margin: auto;
+    padding: 1rem;
+    padding-top: 1rem;
+    width: 17.5rem;
+}
+.flexSeeMore{
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    font-weight: 600;
+    color: #03464D;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    transition: ease-in;
+    transition: 0.5s;
+}
+.flexSeeMore:hover{
+    opacity: 0.6;
+}
+.flexHeadingText{
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    font-weight: 600;
+}
+.flexParaText{
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.6;
+}
+.flexGetStarted{
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    font-weight: 600;
+    background-color: #7FD957;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-radius: 100%;
+}
+.wave{
+    padding-top: 2rem;
+    width: 100%;
+}
+@media screen and (max-width:1000px) {
+    .wholeParaText{
+        font-size: large;
+    }
+    .flexBoxes{
+        padding-right: 5.5rem;
+        padding-left: 6.3rem;
+        flex-wrap: wrap;
+        gap: 0%;
+        row-gap: 2rem;
+    }
+    .flexBox{
+        width: 22rem;
+    }
+}

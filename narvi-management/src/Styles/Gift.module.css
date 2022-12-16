@@ -1,0 +1,58 @@
+.gift{
+    background-color: #03464D;
+    color: white;
+    margin-top: -1rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-bottom: 6rem;
+}
+.flexSeeMore{
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    font-weight: 600;
+    color: #7FD957;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    transition: ease-in;
+    transition: 0.5s;
+}
+.flexSeeMore:hover{
+    opacity: 0.6;
+}
+.giftHeading{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 3vw;
+    font-weight: 900;
+    padding-bottom: 1rem;
+}
+.giftTop{
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    padding-top: 1rem;
+    opacity: 0.6;
+    font-weight: 600;
+}
+.giftWholeText{
+    text-align: start;
+    margin-top: 13rem;
+}
+.giftImageFlex{
+    display: flex;
+}
+.giftWave{
+    width: 100%;
+    margin-top: -14vw;
+}
+@media screen and (max-width:1000px) {
+    .gift{
+        display: block;
+        padding-bottom: 1rem;
+    }
+    .giftWholeText{
+        margin-top: auto;
+        padding-bottom: 2rem;
+    }
+}

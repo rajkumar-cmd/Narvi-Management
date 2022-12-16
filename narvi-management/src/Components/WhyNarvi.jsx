@@ -184,7 +184,7 @@ const WhyNarvi = () => {
                         </ListItem>
                     </NavLink>
                     <NavLink>
-                        <p className={Style.seeMore}>See all use cases <ArrowForwardIcon /></p>
+                        <p className={Style.seeMore}>See all integration <ArrowForwardIcon /></p>
                     </NavLink>
                 </UnorderedList>
             </div>

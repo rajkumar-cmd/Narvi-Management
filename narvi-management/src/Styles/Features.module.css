@@ -34,6 +34,8 @@
     border-radius: 10px;
     margin-top: 2%;
     margin-bottom: 2%;
+    transition: ease-in-out;
+    transition: 0.5s;
 }
 .listArrange:hover{
     background-color: #2c3349;
@@ -51,6 +53,8 @@
     font-size: large;
     font-weight: 600;
     color: #7FD957;
+    transition: ease-in-out;
+    transition: 0.5s;
 }
 .seeMore:hover{
     color: #a8da92;
@@ -79,6 +83,8 @@
     border-radius: 0px 0px 5px 5px;
     color: white;
     background-color: #0E6131;
+    transition: ease-in-out;
+    transition: 0.5s;
 }
 .cardFooter:hover{
     border-radius: 0px 0px 5px 5px;
