@@ -41,8 +41,10 @@ import { ArrowForwardIcon, ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/ico
 import { AiOutlineForm, AiOutlineFundProjectionScreen, AiOutlineAreaChart } from "react-icons/ai";
 import { MdSpaceDashboard, MdOndemandVideo } from "react-icons/md";
 import { CiMobile3 } from "react-icons/ci";
+import { AuthContext } from "../Context/AuthContextProvider";
 
 const SideDrawer = () => {
+    const val = React.useContext(AuthContext);
     // Side Drawer
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
@@ -103,7 +105,6 @@ const SideDrawer = () => {
         handleFuse();
         setPricingIcon(!PricingIcon);
         setFocusPricing(!focusPricing);
-
     }
 
     // Contact Sales
@@ -114,7 +115,6 @@ const SideDrawer = () => {
         handleFuse();
         setContactIcon(!ContactIcon);
         setFocusContact(!focusContact);
-
     }
 
     // Login
@@ -125,7 +125,6 @@ const SideDrawer = () => {
         handleFuse();
         setLoginIcon(!LoginIcon);
         setFocusLogin(!focusLogin);
-
     }
 
     // Signup
@@ -136,8 +135,11 @@ const SideDrawer = () => {
         handleFuse();
         setSignupIcon(!SignupIcon);
         setFocusSignup(!focusSignup);
-
     }
+    const handleSignout = () => {
+        val.handleAuth();
+    }
+
     return (
         <div>
             <div className={Style.wholeComponentTablet}>
@@ -841,23 +843,25 @@ const SideDrawer = () => {
                                     </AccordionItem>
                                 </Accordion>
                                 <div className={Style.drawerFooter}>
-                                    <NavLink to={"/login"} className={Style.drawerFooterButton1} onClick={handleLogin}>
-                                        <button className={Style.drawerFooterButtonChild1}>
-                                            Login
-                                        </button>
-                                    </NavLink>
-                                    <NavLink to={"/signup"} className={Style.drawerFooterButton2} onClick={handleSignup}>
-                                        <button className={Style.drawerFooterButtonChild2}>
-                                            Start for free
-                                        </button>
-                                    </NavLink>
+                                    {val.isAuth == true ? ("") : (
+                                        <NavLink to={"/login"} className={Style.drawerFooterButton1} onClick={handleLogin}>
+                                            <button className={Style.drawerFooterButtonChild1}>
+                                                Login
+                                            </button>
+                                        </NavLink>
+                                    )}
+                                    {val.isAuth == true ? (
+                                        <NavLink to={"/signup"} className={Style.drawerFooterButton2}>
+                                            <button onClick={handleSignout} className={Style.drawerFooterButtonChild2}>Signout</button>
+                                        </NavLink>) :
+                                        (<NavLink to={"/signup"} className={Style.drawerFooterButton2}>
+                                            <button onClick={handleSignup} className={Style.drawerFooterButtonChild2}>Start for free</button>
+                                        </NavLink>)}
                                 </div>
 
                             </DrawerBody>
 
                             <DrawerFooter>
-
-
                             </DrawerFooter>
                         </DrawerContent>
                     </Drawer>

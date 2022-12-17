@@ -7,8 +7,10 @@ import { NavLink } from 'react-router-dom'
 import Features from './Features'
 import Resources from './Resources'
 import Drawer from './Drawer'
+import { AuthContext } from "../Context/AuthContextProvider";
 
 const Navbar = () => {
+    const val = React.useContext(AuthContext);
     // Why Narvi?
     const handleFuse = () => {
         setWhyNarviIcon(true);
@@ -99,6 +101,9 @@ const Navbar = () => {
 
     }
 
+    const handleSignout = () => {
+        val.handleAuth();
+    }
     return (
         <>
             <div className={Style.wholeComponent}>
@@ -138,16 +143,20 @@ const Navbar = () => {
                     </NavLink>
                 </div>
                 <div className={Style.navbarAccounts}>
-                    <NavLink to={"/login"} className={Style.navbarText6} onClick={handleLogin}>
-                        <button>
-                            Login
-                        </button>
-                    </NavLink>
-                    <NavLink to={"/signup"} className={Style.navbarText7} onClick={handleSignup}>
-                        <button>
-                            Start for free
-                        </button>
-                    </NavLink>
+                    {val.isAuth == true ? ("") : (
+                        <NavLink to={"/login"} className={Style.navbarText6} onClick={handleLogin}>
+                            <button onClick={handleSignup}>Login</button>
+                        </NavLink>
+                    )}
+
+                    {val.isAuth == true ? (
+                        <NavLink to={"/"} className={Style.navbarText7}>
+                            <button onClick={handleSignout}>Signout</button>
+                        </NavLink>) : (
+                        <NavLink to={"/signup"} className={Style.navbarText7}>
+                            <button onClick={handleSignup}>Start for free</button>
+                        </NavLink>
+                    )}
                 </div>
             </div>
             <div className={Style.wholeComponentTablet}>

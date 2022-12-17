@@ -20,11 +20,71 @@
     font-size: 1vw;
     opacity: 0.6;
 }
+.wholeParaText1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    text-align: start;
+}
+.wholeHeaderText{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 2vw;
+    text-align: start;
+    font-weight: 900;
+    padding-bottom: 1rem;
+}
 .TabHeading{
-    font-size: x-large;
+    font-size: large;
+}
+.applyFlex{
+    display: flex;
+}
+.flexSeeMore{
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    font-weight: 600;
+    color:#7FD957;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    transition: ease-in;
+    transition: 0.5s;
+    text-align: start;
+    /* margin-right: 47vw; */
+}
+.flexSeeMore:hover{
+    opacity: 0.6;
+}
+.flextextCont{
+    margin-top: 5vw;
+}
+.flexgetStarted{
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    font-weight: 600;
+    color:#051130;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    transition: ease-in;
+    transition: 0.5s;
+    background-color: #ffc000;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    border-color: #7FD957;
+}
+.flexgetStarted:hover{
+    background-color: orange;
 }
 @media screen and (max-width:1000px) {
     .wholeParaText{
         font-size: large;
+    }
+    .applyFlex{
+        flex-direction: column-reverse;
+    }
+    .flexImage{
+        margin-bottom: 2rem;
+    }
+    .flextextCont{
+        margin-top: auto;
     }
 }

@@ -6,6 +6,7 @@ import TrustedBy from "../Components/TrustedBy";
 import TeamWork from '../Components/TeamWork';
 import Gift from '../Components/Gift';
 import Workmanagement from '../Components/Workmanagement';
+import Try from '../Components/Try';
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <TeamWork/>
       <Gift/>
       <Workmanagement/>
+      <Try/>
     </div>
   )
 }

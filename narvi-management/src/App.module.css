@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  filter: drop-shadow();
 }
 
 .st0{fill:#7FD957;}

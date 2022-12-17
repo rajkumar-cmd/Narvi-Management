@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+.loginPage{
+    background-color: #EBF5F3;
+    padding: 20rem 40rem;
+}
+.login{
+    background-color: white;
+    color: #2c3349;
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.input{
+    padding: 1rem;
+    width: 25rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.text{
+    text-align: start;
+    padding:0 5rem;
+    font-size:x-large;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 1rem;
+    font-weight: 600;
+}
+.header{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: xx-large;
+    color: #0E6131;
+}
+.para{
+    color: #0E6131;
+    font-size:large;
+    padding-bottom: 2rem;
+}
+.submit{
+    background-color: #0E6131;
+    color: white;
+    border: 2px solid #0E6131;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 70%;
+    font-size: large;
+    font-weight: 600;
+}
+.submit:hover{
+    background-color: white;
+    color: #0E6131;
+}
+.messagediv{
+    width: 100%;
+    margin-top: 2rem;
+}
+.message{
+    background-color: #2c3349;
+    color: white;
+    border: 2px solid #2c3349;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: large;
+    font-weight: 600;
+}
+.message:hover{
+    background-color: white;
+    color: #2c3349;
+}
+@media screen and (max-width:1000px) {
+    .loginPage{
+        padding: 20rem 10rem;
+    }
+}
