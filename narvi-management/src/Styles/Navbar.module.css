@@ -169,7 +169,7 @@
         padding-right: 5rem;
     }
 }
-@media screen and (max-width:700px ) {
+@media screen and (max-width:800px ) {
     .wholeComponentTablet{
         background-color: #0d1833;
         padding-left: 3rem;

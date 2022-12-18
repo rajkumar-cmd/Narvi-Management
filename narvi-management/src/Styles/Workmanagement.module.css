@@ -74,9 +74,52 @@
 .flexgetStarted:hover{
     background-color: orange;
 }
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1200px) {
+    .TabHeading{
+        font-size: medium;
+    }
+    .Workmanagement{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
     .wholeParaText{
         font-size: large;
+    }
+    .WorkHeading{
+        font-size: 2rem;
+    }
+    .applyFlex{
+        flex-direction: column-reverse;
+    }
+    .flexImage{
+        margin-bottom: 2rem;
+    }
+    .flextextCont{
+        margin-top: auto;
+    }
+    .wholeHeaderText{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:700px) {
+    .TabHeading{
+        font-size: small;
+    }
+    .wholeHeaderText{
+        font-size: 1.2rem;
+    }
+    .wholeParaText1{
+        font-size: medium;
+    }
+    .Workmanagement{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .wholeParaText{
+        font-size: medium;
+    }
+    .WorkHeading{
+        font-size: 1.5rem;
     }
     .applyFlex{
         flex-direction: column-reverse;

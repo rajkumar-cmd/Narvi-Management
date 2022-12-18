@@ -99,14 +99,38 @@
     width: 100%;
     margin-top: -6.5rem;
 }
-@media screen and (max-width:1650px) {
+@media screen and (max-width:1200px) {
     .wholeParaText{
         font-size: large;
+    }
+    .wholeHeaderText{
+        font-size: 2rem;
     }
     .teamWork{
         background-color: #EBF5F3;
         padding-right: 5rem;
         padding-left: 5rem;
+    }
+    .flexBoxes{
+        flex-wrap: wrap;
+        gap: 0%;
+        row-gap: 2rem;
+    }
+    .flexBox{
+        width: 22rem;
+    }
+}
+@media screen and (max-width:800px) {
+    .wholeParaText{
+        font-size: large;
+    }
+    .wholeHeaderText{
+        font-size: 2rem;
+    }
+    .teamWork{
+        background-color: #EBF5F3;
+        padding-right: 3rem;
+        padding-left: 3rem;
     }
     .flexBoxes{
         flex-wrap: wrap;

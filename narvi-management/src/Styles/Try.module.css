@@ -38,11 +38,44 @@
     padding-top: 5rem;
     width: 35vw;
 }
-@media screen and (max-width:1100px) {
+@media screen and (max-width:1200px) {
     .wholeParaText{
         font-size: large;
     }
     .svgMantain{
         display: none;
+    }
+    .mainBody{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    .wholebuttons{
+        display: flex;
+        flex-direction: column;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    .wholeinput{
+        width: auto;
+    }
+}
+@media screen and (max-width:800px ) {
+    .wholeParaText{
+        font-size: medium;
+    }
+    .wholebuttons{
+        display: flex;
+        flex-direction: column;
+        padding: 0%;
+    }
+    .WorkHeading{
+        font-size: 1.5rem;
+    }
+    .wholeinput{
+        width: auto;
+    }
+    .mainBody{
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 }

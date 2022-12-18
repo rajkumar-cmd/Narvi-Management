@@ -4,7 +4,7 @@
 .wholeHeader{
     background-color: #0d1833;
     color: white;
-    padding-left: 11rem;
+    padding-left: 10rem;
     padding-right: 10rem;
     padding-top: 2vw;
     display: flex;
@@ -88,7 +88,7 @@
         justify-content: center;
     }
 }
-@media screen and (max-width:700px ) {
+@media screen and (max-width:800px ) {
     .wholeHeader{
         background-image: url("");
         padding-left: 3rem;

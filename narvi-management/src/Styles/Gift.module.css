@@ -74,7 +74,7 @@
         font-size: 6vw;
     }
 }
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .gift{
         padding-left: 3rem;
         padding-right: 3rem;
