@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@900&display=swap');
+.wholeHeader{
+    background-color: #EBF5F3;
+    color: #0d1833;
+    padding-left: 11rem;
+    padding-right: 10rem;
+    padding-top: 2vw;
+    display: flex;
+}
+.wholeHeaderText{
+    font-family: 'Noto Sans', sans-serif;
+    text-align: start;
+    font-size: 2.5vw;
+    font-weight: 600;
+    padding-right: 15vw;
+    margin-right: 10vw;
+}
+.wholeParaText{
+    font-family: 'Poppins', sans-serif;
+    text-align: start;
+    font-size: 1vw;
+    opacity: 0.6;
+}
+.wholeParaText1{
+    font-family: 'Poppins', sans-serif;
+    text-align: start;
+    font-size: 1vw;
+    color: #007860;
+    opacity: 0.6;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+.wholebuttons{
+    padding-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+.wholebutton{
+    background-color: #007860;
+    color: white;
+    border: 4px solid #007860;
+    border-radius: 100px;
+    padding: 1rem 3rem;
+    margin-bottom: 2rem;
+}
+.wholebutton:hover{
+    border: 4px solid #0d1833;
+    background-color: #0d1833;
+    color: white;
+}
+@media screen and (max-width:1700px) {
+    .wholeHeader{
+        background-image: url("");
+        padding-left: 5rem;
+        padding-right: 5rem;
+        display: block;
+    }
+    .wholeHeaderText{
+        text-align: center;
+        font-size: 6vw;
+        padding-right: 0%;
+        margin-right: 0%;
+    }
+    .wholeParaText{
+        font-size: large;
+        text-align: center;
+    }
+    .wholeParaText1{
+        font-size: larger;
+        text-align: center;
+        color: #007860;
+        font-weight: 600;
+    }
+    .headerImg{
+        display: block;
+        margin: auto;
+    }
+    .wholebuttons{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:800px ) {
+    .wholeHeader{
+        background-image: url("");
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .wholebuttons{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+    }
+    .wholebutton{
+        background-color: #007860;
+        border: 4px solid #007860;
+        padding: 1rem 3rem;
+    }
+    .wholeinput{
+        width: auto;
+    }
+    .wholeParaText1{
+        font-size: larger;
+        text-align: center;
+        margin-top: 0;
+        color: #007860;
+        font-weight: 600;
+    }
+}

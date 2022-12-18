@@ -186,7 +186,7 @@ const SideDrawer = () => {
                                             <p className={Style.topHeadList}>FOR TEAMS</p>
                                         </AccordionPanel>
                                         <AccordionPanel pb={0.2}>
-                                            <NavLink to="">
+                                            <NavLink to="/marketing">
                                                 <div className={Style.DrawerContent}>
                                                     <div>
                                                         <Icon className={Style.listIcon} style={{ color: "#7FD957" }} as={HiSpeakerphone} />
