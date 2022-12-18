@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: row-reverse;
     padding-bottom: 12rem;
+    flex-wrap: wrap;
 }
 .flexSeeMore{
     font-family: 'Poppins', sans-serif;
@@ -43,15 +44,17 @@
 .giftWholeText{
     text-align: start;
     margin-top: 13rem;
+    width: 50%;
 }
 .giftImageFlex{
     display: flex;
+    width: 50%;
 }
 .giftWave{
     width: 100%;
     margin-top: -14vw;
 }
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1200px) {
     .gift{
         display: block;
         padding-bottom: 1rem;
@@ -59,8 +62,24 @@
     .giftWholeText{
         margin-top: auto;
         padding-bottom: 2rem;
+        width: 100%;
+    }
+    .giftImageFlex{
+        width: 100%;
     }
     .flexSeeMore{
         margin-bottom: 4rem;
+    }
+    .giftHeading{
+        font-size: 6vw;
+    }
+}
+@media screen and (max-width:700px) {
+    .gift{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .giftHeading{
+        font-size: 6vw;
     }
 }

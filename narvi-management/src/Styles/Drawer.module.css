@@ -1,8 +1,6 @@
 .wholeComponentTablet{
     display: flex;
     justify-content: space-between;
-    padding-left: 6rem;
-    padding-right: 6rem;
     background-color: #0d1833;
 }
 .DrawerMain{

@@ -94,12 +94,15 @@ const Try = () => {
                 </svg>
             </div>
             <div>
-                <h1 className={Style.WorkHeading}>The Most Versatile Work Management Platform™</h1>
-                <p className={Style.wholeParaText}>Maximize your team's performance, accelerate growth, and improve customer experience with Wrike's robust and extensive features.</p>
+                <h1 className={Style.WorkHeading}>Try our powerful work management software for free</h1>
+                <p className={Style.wholeParaText}>Sign up for a free two-week trial of Wrike today — no credit card required. </p>
                 <form onSubmit={(e) => handleSubmit(e)} className={Style.wholebuttons}>
                     <input className={Style.wholeinput} type="email" value={email.text} onChange={(e) => handleChange(e)} placeholder='Enter your business email' />
                     <button className={Style.wholebutton}>Get Started</button>
                 </form>
+            </div>
+            <div className={Style.svgMantain}>
+                <img src="https://web-static.wrike.com/cdn-cgi/image/format=auto,quality=80,width=492,dpr=1/tp/static/assets/img/raster/default/3.png?v2" alt="" />
             </div>
         </div>
     )
