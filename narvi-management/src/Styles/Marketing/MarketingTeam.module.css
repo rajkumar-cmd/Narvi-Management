@@ -7,10 +7,11 @@
     font-size: 3vw;
     font-weight: 900;
     padding-bottom: 1rem;
+    color: white;
 }
 .teamWork{
     padding-top: 5rem;
-    background-color: #EBF5F3;
+    background-color: #03464D;
     padding-right: 10rem;
     padding-left: 10rem;
 }
@@ -19,6 +20,7 @@
     text-align: center;
     font-size: 1vw;
     opacity: 0.6;
+    color: white;
 }
 .flexBoxes{
     padding-bottom: 2rem;
@@ -43,7 +45,7 @@
     padding-top: 1rem;
 }
 .flexBox:hover{
-    background-color: #03464D;
+    background-color: #0d1833;
     cursor: pointer;
     color: white;
 }
@@ -62,13 +64,12 @@
     font-family: 'Poppins', sans-serif;
     font-size: larger;
     font-weight: 600;
-    color: #03464D;
+    color: white;
     margin: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
     transition: ease-in;
     transition: 0.5s;
-    padding-bottom: 5rem;
 }
 .flexSeeMore:hover{
     opacity: 0.6;
@@ -108,7 +109,7 @@
         font-size: 2rem;
     }
     .teamWork{
-        background-color: #EBF5F3;
+        background-color: #03464D;
         padding-right: 5rem;
         padding-left: 5rem;
     }
@@ -129,7 +130,7 @@
         font-size: 2rem;
     }
     .teamWork{
-        background-color: #EBF5F3;
+        background-color: #03464D;
         padding-right: 3rem;
         padding-left: 3rem;
     }

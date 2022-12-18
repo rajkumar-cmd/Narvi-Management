@@ -27,11 +27,11 @@ const TopBanner = () => {
                     <input className={Style.wholeinput} type="email" value={email.text} onChange={(e) => handleChange(e)} placeholder='Enter your business email' />
                     <button className={Style.wholebutton}>Get Started</button>
                 </form>
-                <div className={Style.headerImg}>
-                    <img src="https://web-static.wrike.com/cdn-cgi/image/format=auto,quality=80,width=672,dpr=1/tp/storage/uploads/95fbafc9-6609-4b2d-aa0b-ceba4f4c4cbb/rebrand-hero-illustration-homepage-screenshots-dark-mobile.png" alt="" />
-                </div>
+                {/* <div className={Style.headerImg}> */}
+                    <img className={Style.headerImg} src="https://web-static.wrike.com/cdn-cgi/image/format=auto,quality=80,width=672,dpr=1/tp/storage/uploads/95fbafc9-6609-4b2d-aa0b-ceba4f4c4cbb/rebrand-hero-illustration-homepage-screenshots-dark-mobile.png" alt="" />
+                {/* </div> */}
             </div>
-            <div>
+            <div  className={Style.wholeHeader2}>
 
             </div>
         </div>

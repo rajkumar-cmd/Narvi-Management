@@ -2,21 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@900&display=swap');
 .wholeHeader{
-    background-color: #0d1833;
-    color: white;
-    padding-left: 10rem;
+    background-color: #EBF5F3;
+    color: #0d1833;
+    padding-left: 11rem;
     padding-right: 10rem;
     padding-top: 2vw;
     display: flex;
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position: 40% 0%;
-    background-image: url("https://web-static.wrike.com/cdn-cgi/image/width=1920,format=auto,quality=80/tp/storage/uploads/a6689dc7-598d-42e0-9856-339b302c27d5/rebrand-hero-illustration-homepage-screenshots-dark-desktop-2x.png");
 }
 .wholeHeaderText{
     font-family: 'Noto Sans', sans-serif;
     text-align: start;
-    font-size: 4vw;
+    font-size: 2.5vw;
     font-weight: 600;
     padding-right: 15vw;
     margin-right: 10vw;
@@ -27,18 +23,14 @@
     font-size: 1vw;
     opacity: 0.6;
 }
-.wholeHeader1{
-    padding-bottom: 2vw;
-    padding-top: 1vw;
-}
-.wholeinput{
-    padding: 1rem;
-    border: 4px solid #7FD957;
-    border-radius: 10px;
-    width:24vw;
-    /* width: auto; */
-    color: #0d1833;
-    font-family: 'Play', sans-serif;
+.wholeParaText1{
+    font-family: 'Poppins', sans-serif;
+    text-align: start;
+    font-size: 1vw;
+    color: #007860;
+    opacity: 0.6;
+    font-weight: 600;
+    margin-top: 1rem;
 }
 .wholebuttons{
     padding-top: 1.5rem;
@@ -46,22 +38,19 @@
     gap: 1rem;
 }
 .wholebutton{
-    background-color: #7FD957;
-    border: 4px solid #7FD957;
+    background-color: #007860;
+    color: white;
+    border: 4px solid #007860;
     border-radius: 100px;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding: 1rem 3rem;
+    margin-bottom: 2rem;
 }
 .wholebutton:hover{
-    border: 4px solid #0E6131;
-    background-color: #0E6131;
-    color: #7FD957;
+    border: 4px solid #0d1833;
+    background-color: #0d1833;
+    color: white;
 }
-.headerImg{
-    display: none;
-    padding-top: 1rem;
-}
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1700px) {
     .wholeHeader{
         background-image: url("");
         padding-left: 5rem;
@@ -78,11 +67,16 @@
         font-size: large;
         text-align: center;
     }
+    .wholeParaText1{
+        font-size: larger;
+        text-align: center;
+        color: #007860;
+        font-weight: 600;
+    }
     .headerImg{
         display: block;
         margin: auto;
     }
-    
     .wholebuttons{
         display: flex;
         justify-content: center;
@@ -102,11 +96,18 @@
         margin: auto;
     }
     .wholebutton{
-        background-color: #7FD957;
-        border: 4px solid #7FD957;
-        padding: 1rem;
+        background-color: #007860;
+        border: 4px solid #007860;
+        padding: 1rem 3rem;
     }
     .wholeinput{
         width: auto;
+    }
+    .wholeParaText1{
+        font-size: larger;
+        text-align: center;
+        margin-top: 0;
+        color: #007860;
+        font-weight: 600;
     }
 }

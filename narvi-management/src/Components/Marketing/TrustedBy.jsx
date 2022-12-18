@@ -1,5 +1,5 @@
 import React from 'react'
-import Style from "../Styles/TrustedBy.module.css"
+import Style from "../../Styles/Marketing/TrustedBy.module.css"
 
 const TrustedBy = () => {
   return (

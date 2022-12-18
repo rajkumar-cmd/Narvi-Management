@@ -387,7 +387,32 @@ const Footer = () => {
                 </div>
             </div>
             <div className={Style.wholeFooterBodyTablet}>
-                <FooterTablet/>
+                <FooterTablet />
+                <Center>
+                    <Divider />
+                </Center>
+                <div className={Style.footerFooter}>
+                    <div className={Style.footerFooter2}>
+                        <a href="">
+                            <Icon className={Style.listIcon2} as={AiOutlineTwitter} />
+                        </a>
+                        <a href="">
+                            <Icon className={Style.listIcon2} as={FaGooglePlay} />
+                        </a>
+                        <a href="">
+                            <Icon className={Style.listIcon2} as={FaLinkedinIn} />
+                        </a>
+                        <a href="">
+                            <Icon className={Style.listIcon2} as={BsYoutube} />
+                        </a>
+                        <a href="">
+                            <Icon className={Style.listIcon2} as={FaInstagram} />
+                        </a>
+                    </div>
+                </div>
+                <div className={Style.lowerfooterFooter}>
+                    <p className={Style.copyrightText}>©2006-2022 Wrike, Inc. All rights reserved. Patented.<a href="" className={Style.copyrightLink}>Privacy Policy</a>.<a href="" className={Style.copyrightLink}>Terms of Service</a>.<a href="" className={Style.copyrightLink}>Cookie Preferences</a>.</p>
+                </div>
             </div>
         </>
     )

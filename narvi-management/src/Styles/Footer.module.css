@@ -125,5 +125,60 @@
 @media screen and (max-width:1582px) {
     .wholeFooterBody{
         display: none;
-    }   
+    }
+    .footerFooter2{
+        display: flex;
+        padding-top: 1rem;
+        justify-content: space-around;
+    }
+    .listIcon2:hover{
+        color: aqua;
+    }
+    .wholeFooterBodyTablet{
+        background-color: #0C3245;
+        color: white;
+        margin-top: 1rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    .lowerfooterFooter{
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+    .copyrightLink{
+        text-decoration: underline;
+    }
+    .copyrightLink:hover{
+        color: aqua;
+    }
+}
+@media screen and (max-width:800px ) {
+    .wholeFooterBody{
+        display: none;
+    }
+    .footerFooter2{
+        display: flex;
+        padding-top: 1rem;
+        justify-content: space-around;
+    }
+    .listIcon2:hover{
+        color: aqua;
+    }
+    .wholeFooterBodyTablet{
+        background-color: #0C3245;
+        color: white;
+        margin-top: 1rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .lowerfooterFooter{
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+    .copyrightLink{
+        text-decoration: underline;
+    }
+    .copyrightLink:hover{
+        color: aqua;
+    }
 }

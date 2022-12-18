@@ -29,7 +29,7 @@ const WhyNarvi = () => {
             <div>
                 <p className={Style.MasterlistHeading}>FOR TEAMS</p>
                 <UnorderedList styleType={"none"}>
-                    <NavLink to={""}>
+                    <NavLink to={"/marketing"}>
                         <ListItem className={Style.listArrange}>
                             <div>
                                 <Icon className={Style.listIcon} as={HiSpeakerphone} />

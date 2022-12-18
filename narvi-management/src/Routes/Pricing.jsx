@@ -1,9 +1,10 @@
 import React from 'react'
+import TopBanner from '../Components/Pricing/TopBanner'
 
 const Pricing = () => {
   return (
     <div>
-    <h1>Pricing</h1>
+    <TopBanner/>
     </div>
   )
 }

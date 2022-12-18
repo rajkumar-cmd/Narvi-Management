@@ -13,4 +13,15 @@
 .backGroundColor {
   background-color: #007860;
 }
-
+@media screen and (max-width:1200px) {
+  .backGroundColor{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media screen and (max-width:800px ) {
+  .backGroundColor{
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}

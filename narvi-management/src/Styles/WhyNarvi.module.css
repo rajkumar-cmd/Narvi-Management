@@ -9,6 +9,7 @@
     padding-left: 10rem;
     z-index: 100;
     position: absolute;
+    box-shadow: rgba(2, 238, 53, 0.2) 0px 400px 400px 100px;
 }
 .MasterlistHeading{
     color: #7FD957;
