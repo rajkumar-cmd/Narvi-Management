@@ -84,7 +84,6 @@ function Login() {
             <button
               className={Style.submit}
               type="submit"
-              disabled={disablebtn}
             >
               SUBMIT
             </button>
