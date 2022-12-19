@@ -3,39 +3,40 @@ import React from "react"
 import Style from "../Styles/Signup.module.css";
 
 const Signup = () => {
-  const [disablebtn, setDisablebtn] = React.useState(false);
   const [details, setDetails] = React.useState({
     email: "",
     password: ""
   });
+  const [data,setData]=React.useState([]);
   // const [token,setToken]=React.useState("");
+  var type;
   const handleChange = (e) => {
-    const type = e.target.type;
+    type = e.target.type;
     const value = e.target.value;
     setDetails({ ...details, [type]: value });
   }
   console.log(details);
   const handleSubmit = (e) => {
     e.preventDefault();
-    setDisablebtn(true);
+    // setDetails({...details,"id":type});
+    setData([...data,details]);
     storeData();
   }
   const storeData = () => {
-    // fetch("https://reqres.in/api/login", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json"
-    //   },
-    //   body: JSON.stringify(details)
-    // }).then(function (res) {
-    //   return res.json();
-    // }).then(function (res) {
-    //   val.handleToken(res.token);
-    //   val.handleAuth();
-    // })
-    localStorage.setItem(details.email, details.password);
+    fetch("https://signuptested-crow.onrender.com/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(details)
+    }).then(function (res) {
+      return res.json();
+    })
     details.email="";
     details.password="";
+    // localStorage.setItem(details.email, details.password);
+    // details.email="";
+    // details.password="";
   }
   return (
     <div className={Style.loginPage}>
