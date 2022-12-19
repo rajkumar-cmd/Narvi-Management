@@ -5,7 +5,6 @@ import Style from "../Styles/Login.module.css";
 
 function Login() {
   const val = React.useContext(AuthContext);
-  const [disablebtn, setDisablebtn] = React.useState(false);
   const [details, setDetails] = React.useState({
     email: "",
     password: ""
@@ -19,24 +18,13 @@ function Login() {
   console.log(details);
   const handleSubmit = (e) => {
     e.preventDefault();
-    setDisablebtn(true);
     fetchData();
   }
-  const fetchData = () => {
-    // fetch("https://reqres.in/api/login", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json"
-    //   },
-    //   body: JSON.stringify(details)
-    // }).then(function (res) {
-    //   return res.json();
-    // }).then(function (res) {
-    //   val.handleToken(res.token);
-    //   val.handleAuth();
-    // })
-    const getPassword=localStorage.getItem(details.email);
-    if(getPassword==details.password){
+  const fetchData = async () => {
+    const datas= await fetch(`https://signuptested-crow.onrender.com/users?email=${details.email}`)
+    let data=await datas.json();
+    console.log(data[0]);
+    if(data[0].password==details.password){
       val.handleAuth();
     }
     else{
